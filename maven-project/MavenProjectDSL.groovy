@@ -6,7 +6,7 @@ job('First-Maven-Project-via-DSL') {
   }
 
   triggers {
-    scm(* * * * *)
+    scm('* * * * *')
   }
 
   steps {
