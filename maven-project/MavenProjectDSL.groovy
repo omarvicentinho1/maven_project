@@ -10,7 +10,7 @@ job('First-Maven-Project-via-DSL') {
   }
 
   steps {
-    maven('clean package', 'maven-project/pom.xml')
+    maven('LocalMaven', 'clean package', 'maven-project/pom.xml')
   }
 
   publishers {
