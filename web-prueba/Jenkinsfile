@@ -6,8 +6,10 @@ pipeline {
 	sh 'mvn -f web-prueba/pom.xml clean package'
       }
       post {
-	echo 'Now archiving the artifacts...'
-	archiveArtifacts artifacts: '**/*.war'
+	success {
+	  echo 'Now archiving the artifacts...'
+	  archiveArtifacts artifacts: '**/*.war'
+	}
       }
     }
   }
