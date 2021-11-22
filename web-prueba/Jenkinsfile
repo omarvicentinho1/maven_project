@@ -17,5 +17,13 @@ pipeline {
 	build job: 'CD_Prueba'
       }
     }
+    stage('Deploy to Production Environment') {
+      steps {
+	timeout(time:3, unit:'DAYS') {
+	  input message: 'Approve Production Deployment?'
+	}
+	build job: 'Prod_Prueba'
+      }
+    }
   }
 }
