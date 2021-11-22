@@ -1,0 +1,14 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build Application') {
+      steps {
+	sh 'mvn -f web-prueba/pom.xml clean package'
+      }
+      post {
+	echo 'Now archiving the artifacts...'
+	archiveArtifacts artifacts: **/*.war
+      }
+    }
+  }
+}
