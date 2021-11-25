@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Deploy in Staging Environment') {
       steps {
-	build job: ''
+	build job: 'CD_CodePipeline'
       }
     }
     stage('Deploy to Production Environment') {
@@ -22,7 +22,7 @@ pipeline {
 	timeout(time:2, unit:'DAYS') {
 	  input message: 'Approve Production Environment?'
 	}
-	build job: ''
+	build job: 'Prod_CodePipeline'
       }
     }
   }
