@@ -7,8 +7,8 @@ pipeline {
       }
       post {
 	success {
-	  echo 'Archiving artifacts'
-	  archiveArtifacts artifacts: '**/*.war'
+	  echo 'Archiving artifact'
+	  archiveArtifacts artifacts: '**/proyecto-maven.war'
 	}
       }
     }
