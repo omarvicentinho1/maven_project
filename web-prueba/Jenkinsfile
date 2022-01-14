@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build Maven Project') {
+      steps {
+	sh 'mvn -f web-prueba/pom.xml clean package'
+      }
+      post {
+	success {
+	  echo 'Archiving artifacts'
+	  archiveArtifacts artifacts: '**/*.war'
+	}
+      }
+    }
+    stage('Deploy to Staging Environment') {
+      steps {
+	build job: 'CD_Prueba'
+      }
+    }
+    stage('Deploy to Production Environment') {
+      steps {
+	timeout(time:3, unit:'DAYS') {
+	  input message: 'Approve Production Deployment?'
+	}
+	build job: 'Prod_Prueba'
+      }
+    }
+  }
+}
