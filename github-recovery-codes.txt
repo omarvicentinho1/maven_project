@@ -1,0 +1,30 @@
+041d2-e5a95
+b147b-ef54b
+f86c3-c0d49
+b48af-6f4e6
+72d13-097ba
+be447-939e9
+3d57f-dc35c
+015c3-f9005
+7b315-2b5d6
+0d43a-2cbdb
+fec96-f4e50
+2336b-9cfdd
+607ef-13871
+4fee3-22a37
+e05e7-1976b
+59722-49e42
+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 - token github
+
+AWS Username = omarcordova
+Password = zxg[gGv$=bbj077
+Console Login Link = https://764503582028.signin.aws.amazon.com/console
+
+https://github.com/
+https://hub.docker.com/
+http://localhost:8080/login?from=%2F
+https://www.guru99.com/
+https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
+https://geeksencuarentena.com/linux/como-instalar-kvm-en-ubuntu-20-04/
+https://docs.okd.io/3.11/minishift/getting-started/setting-up-virtualization-environment.html
+
